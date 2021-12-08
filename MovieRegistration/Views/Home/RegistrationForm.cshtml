@@ -1,0 +1,31 @@
+﻿<h2>Movie Registration Form</h2>
+
+<!--When submit is clicked on our form it will go to the controller an try to find and call an action named Result-->
+<form action="Registered">
+    <p>ID</p>
+    <!--If the name of an input matches the name of a property .Net will map them together automatically in the controller-->
+    <input type="text" name="ID" />
+
+    <p>Title</p>
+    <input type="text" name="Title" maxlength="50" required />
+    <p>Year</p>
+    <input type="number" name="Year" min="1880" max="2021"/>
+    <br />
+        
+    <label for="genre">Genre</label>
+    <select id="genre" name="Genre">
+        <option value="action">Action</option>
+        <option value="adventure">Adventure</option>
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+        <option value="family">Family</option>
+        <option value="horror">Horror</option>
+        <option value="thriller">Thriller</option>
+        <option value="scifi">Sci-fi</option>
+    </select>
+
+    <p>Runtime</p>
+    <input type="number" name="Runtime" required min="0"/>
+
+    <input type="submit" />
+</form>
